@@ -58,6 +58,9 @@ nav{
     height: 90vh;
     pointer-events: none;
 }
+.home, .about, .skills, .projects, .contact{
+    overflow-y: auto;
+}
 /*Testing-start*/
 
 main{
@@ -106,15 +109,55 @@ main section{
 /*About*/
 #grid-about{
     display: grid;
-    padding: 0 2rem;
+    padding: 0 5rem;
     padding-top: 2rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    text-align: center;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    background: #6C63FF;
+    color: wheat;
+    padding: 0 3rem;
+}
+.card .face1{
+    padding-top: 2rem;
+}
+.card .face2{
+    padding-top: 1rem;
+}
+.card h3{
+    font-family: subway;
+    font-size: 2rem;
+}
+.card p{
+    border-radius: 0%;
+    font-size: 0.8rem;
+}
+.about-box:nth-child(1){
+    margin: auto;
+    grid-row: 1/2;
+    grid-column: 1/4;
+}
+.intro-section h3{
+    font-size: 2.4rem;
+}
+.intro-section p{
+    font-size: 1.2rem;
+}
+.card-img-top{
+    font-size: 5rem;
+}
+.icon-link{
+    font-size: 2rem;
+    padding: 0 0.5rem;
+    color: wheat;
 }
 
-
 /*Smaller screens*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .navbar-collapse li a {background: #EEEDFA; justify-content: center; align-items: center;}
     #grid-home{
         display: grid;
@@ -139,6 +182,29 @@ main section{
     .box h3{
         font-family: chelseaRegular;
         font-size: 1rem;
+    }
+    #grid-about{
+        display: grid;
+        padding: 0 2rem;
+        /* padding-top: 2rem; */
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
+        text-align: center;
+    }
+    .about-box:nth-child(1){
+        grid-row: 1/2;
+    }
+    .about-box:nth-child(2){
+        grid-row: 2/3;
+        margin-bottom: 1rem;
+    }
+    .about-box:nth-child(3){
+        grid-row: 3/4;
+        margin-bottom: 1rem;
+    }
+    .about-box:nth-child(4){
+        grid-row: 4/5;
     }
 }
 /*Testing-end*/
