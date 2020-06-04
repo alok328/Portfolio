@@ -9,6 +9,6 @@ app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/public/index.html')
 })
 
-app.listen(PORT,()=>{
+app.listen(PORT/*, '192.168.43.103'*/, ()=>{
     console.log('started!');
 })

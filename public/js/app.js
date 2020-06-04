@@ -1,14 +1,27 @@
 function init(){
     const pages = document.querySelectorAll('.page');
     const tabs = document.querySelectorAll('.tabs');
+    const tabsCol = document.querySelectorAll('.item-nav-col');
+    currentTab = 0;
+    tabsCol.forEach((tab, index)=>{
+        tab.addEventListener('click', function(){
+            changeTabsCol(this);
+            changePage(index);
+        });
+    });
     tabs.forEach((tab, index)=>{
         tab.addEventListener('click', function(){
             changeTabs(this);
             changePage(index);
-            scrollTab = index;
+            // scrollTab = index;
         });
     });
-    currentTab = 0;
+    function changeTabsCol(tabBody){
+        tabsCol.forEach((tab)=>{
+            tab.classList.remove('active');
+        });
+        tabBody.classList.add('active');
+    }
     function changeTabs(tabBody){
         tabs.forEach((tab)=>{
             tab.classList.remove('active');
@@ -25,5 +38,32 @@ function init(){
         
         currentTab = tabNumber; 
     }
+    navOpen = document.querySelector('.nav-navbar');
+    navClosed = document.querySelector('.nav-navbar-collapse');
+    console.log(navOpen);
+    console.log(navClosed);
+    if(window.innerWidth > 800){
+        navOpen.style.removeProperty('display');
+        navClosed.style.display = 'none';
+    }else{
+        navClosed.style.removeProperty('display');
+        navOpen.style.display = 'none';
+    }
+    window.addEventListener("resize", function(){
+        // currentTab = 0;
+        tabs[0].classList.add('active');
+        tabsCol[0].classList.add('active');
+        changePage(0);
+        changeTabs(tabs[0]);
+        changeTabsCol(tabsCol[0]);
+        if(window.innerWidth > 800){
+            navOpen.style.removeProperty('display');
+            navClosed.style.display = 'none';
+        }else{
+            navClosed.style.removeProperty('display');
+            navOpen.style.display = 'none';
+        }
+    });
+    
 }
 init()
