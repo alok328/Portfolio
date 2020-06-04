@@ -24,6 +24,11 @@ body{
     background: #EEEDFA;
 }
 /*mynav*/
+nav{
+    width: 100vw;
+    min-height: 10vh;
+    background: transparent;
+}
 .my-navbar{
     z-index: 2000;
     width: 100vw;
@@ -37,10 +42,10 @@ li.item-nav a{
     text-decoration: none;
 }
 li.item-nav.active ion-icon, li.item-nav.active a{
-    color: blueviolet;
+    color: rgba(103, 89, 206, 0.9);
 }
 li.item-nav-col.active ion-icon, li.item-nav-col.active span{
-    color: blueviolet;
+    color: rgba(103, 89, 206, 0.9);
 }
 .nav-navbar{
     list-style: none;
@@ -80,32 +85,28 @@ li.item-nav-col.active ion-icon, li.item-nav-col.active span{
 
 
 /* navigation bar*/
-nav{
-    width: 100vw;
-    min-height: 10vh;
-    background: transparent;
-}
-.navbar-nav li a, .navbar-nav{
+
+/* .navbar-nav li a, .navbar-nav{
     font-size: 1.2rem;
     color: #6C63FF !important;
-}
-.navbar-nav li a:hover, .navbar-nav > .active > a {
+} */
+/* .navbar-nav li a:hover, .navbar-nav > .active > a {
     color: blue !important;
     font-size: 1.2rem;
     font-weight: bold;
-}
-.navbar .navbar-collapse {
+} */
+/* .navbar .navbar-collapse {
     width: 100vw;
     text-align: center;
-  }
-.navbar-collapse li a {background: transparent; justify-content: center; align-items: center;}
+  } */
+/* .navbar-collapse li a {background: transparent; justify-content: center; align-items: center;} */
 
 /*pages overlap & sizing*/
 .page{
     width: 100vw;
     height: 90vh;
 }
-.about{
+.about, .tech, .projects, .contact{
     position: absolute;
     top: 0%;
     left: 0%;
@@ -175,7 +176,7 @@ main section{
 .card{
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(49, 24, 253, 0.9) 0%, rgba(108, 99, 255, 0.8) 100%)
+    background: linear-gradient(135deg, rgba(103, 89, 206, 0.9) 0%, rgba(108, 99, 255, 0.8) 100%)
         , url(../images/stars.jpg) center no-repeat;
     background-size: cover;
     color: wheat;
