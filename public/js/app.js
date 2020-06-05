@@ -2,6 +2,10 @@ function init(){
     const pages = document.querySelectorAll('.page');
     const tabs = document.querySelectorAll('.tabs');
     const tabsCol = document.querySelectorAll('.item-nav-col');
+    const navbar = document.querySelector('.my-navbar');
+    const navItems = document.querySelectorAll('li.item-nav a');
+    const navItemsCol = document.querySelectorAll('li.item-nav-col a')
+    // console.log(navItems);
     currentTab = 0;
     tabsCol.forEach((tab, index)=>{
         tab.addEventListener('click', function(){
@@ -32,6 +36,28 @@ function init(){
         const nextPage = pages[tabNumber];
         const currPage = pages[currentTab];
 
+        // if(tabNumber == 0){
+        //     navbar.style.background = '#01E08F'
+        //     navItems.forEach((navItem)=>{
+        //         navItem.style.color = '#013870'
+        //     })
+        //     navItemsCol.forEach((navItem)=>{
+        //         navItem.style.color = '#013870'
+        //     })
+        //     navItems[tabNumber].style.color = '#EDF5E0';
+        //     navItemsCol[tabNumber].style.color = '#EDF5E0';
+        // }else{
+        //     navbar.style.background = '#013870';
+        //     navItems.forEach((navItem)=>{
+        //         navItem.style.color = '#01E08F';
+        //     })
+        //     navItemsCol.forEach((navItem)=>{
+        //         navItem.style.color = '#01E08F'
+        //     })
+        //     navItems[tabNumber].style.color = '#EDF5E0';
+        //     navItemsCol[tabNumber].style.color = '#EDF5E0';
+        // }
+
         const tl = gsap.timeline();
         tl.fromTo(currPage, 0.3, {opacity: 1, pointerEvents: 'all'}, {opacity:0, pointerEvents: 'none'})
         .fromTo(nextPage, 0.3, {opacity:0, pointerEvents: 'none'}, {opacity: 1, pointerEvents: 'all'});
@@ -40,8 +66,8 @@ function init(){
     }
     navOpen = document.querySelector('.nav-navbar');
     navClosed = document.querySelector('.nav-navbar-collapse');
-    console.log(navOpen);
-    console.log(navClosed);
+    // console.log(navOpen);
+    // console.log(navClosed);
     if(window.innerWidth > 800){
         navOpen.style.removeProperty('display');
         navClosed.style.display = 'none';

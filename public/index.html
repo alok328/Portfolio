@@ -3,9 +3,18 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alok Raj - Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#db5945">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#db5945">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#db5945">
+	<link rel="icon" sizes="256x256" href="./images/pic.png">
+    <title>Alok Raj - Portfolio</title>
 </head>
 <body>
     <div class="portfolio">
@@ -41,7 +50,7 @@
 					</li>
 					<li class="item-nav">
 						<a href="#">
-							<ion-icon class="nav-icons" name="mail-open-outline"></ion-icon>
+							<ion-icon class="nav-icons" name="mail-open"></ion-icon>
 							<!-- <span class="text-link">Gmail</span> -->
 						</a>
 					</li>
@@ -116,27 +125,29 @@
 				<div id="home" class="box">
 					<div class="box-content">
 						<h1 class="intro-heading">Code | Play | Repeat</h1>
-						<h3>Love developing applications and playing the guitar</h3>
+						<h3 class="name">Alok Raj.</h3>
+						<h4>Love developing applications and playing the guitar</h4>
+						<!-- <img id="gif" src="./images/fin.gif" alt=""> -->
 					</div>
 				</div>
-				<div class="box">
+				<!-- <div class="box">
 					<div class="box-content">
-						<img id="gif" src="./images/fin.gif" alt="">
+						
 					</div>
-				</div>
+				</div> -->
 				<div class="box">
 					<div class="box-content">
-						<img src="./images/code.svg" alt="">
+						<img src="./images/svgPerson.svg" alt="">
 					</div>
 				</div>
 			</section>
 			<section id="grid-about" class="page about">
 				<div class="about-box intro-section">
 					<h3>Hey there, I'm Alok. Good to see you!</h3>
-					<p>I am a Computer Science & Engineering graduate. I have experience building back-end systems. I also like developing android applications and currently I am exploring the field of Data Science.</p>
+					<p>I have experience building backend services using NodeJS & Flask. I also like developing android applications and websites. <br> Currently I am exploring the field of Data Science.</p>
 				</div>
 				<div class="about-box">
-					<div class="card">
+					<div class="card-box">
 						<div class="face face1">
 							<div class="content">
 								<ion-icon class="card-img-top mx-auto" name="school-outline"></ion-icon>
@@ -157,7 +168,7 @@
 					</div>
 				</div>
 				<div class="about-box">
-					<div class="card">
+					<div class="card-box">
 						<div class="face face1">
 							<div class="content">
 								<ion-icon class="card-img-top mx-auto" name="briefcase-outline"></ion-icon>
@@ -179,7 +190,7 @@
 					</div>
 				</div>
 				<div class="about-box">
-					<div class="card">
+					<div class="card-box">
 						<div class="face face1">
 							<div class="content">
 								<ion-icon class="card-img-top mx-auto" name="rocket-outline"></ion-icon>
@@ -189,7 +200,9 @@
 						<div class="face face2">
 							<div class="content">
 								<br>
-								<h6><strong>Playing Cricket</strong></h6>
+								<h6><strong>Cricket, Table Tennis</strong></h6>
+								<br>
+								<h6><strong>Playing Guitar</strong></h6>
 								<br>
 								<h6><strong>Creating & editing videos</strong></h6>
 								<h6>Tech & Music</h6>
@@ -201,17 +214,155 @@
 				</div>
 			</section>
 			<section id="tech-grid" class="page tech">
-				<h3>Working on it!</h3>
+				<div class="tech-box">
+					<div class="skill-box skill-heading">
+						<h4>Programming Languages</h4>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fab fa-cuttlefish icon-skill"></i>
+							</div>
+							<h6>C++</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fab fa-java icon-skill"></i>
+							</div>
+							<h6>JAVA</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fab fa-python icon-skill"></i>
+							</div>
+							<h6>Python</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fab fa-js-square icon-skill"></i>
+							</div>
+							<h6>Javascript</h6>
+						</div>
+					</div>
+				</div>
+				<div class="tech-box">
+					<div class="skill-box skill-heading">
+						<h4>OS/Platforms</h4>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fab fa-linux icon-skill"></i>
+							</div>
+							<h6>Linux</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="far fa-window-maximize icon-skill"></i>
+							</div>
+							<h6>Web</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fab fa-android icon-skill"></i>
+							</div>
+							<h6>Android</h6>
+						</div>
+					</div>
+				</div>
+				<div class="tech-box">
+					<div class="skill-box skill-heading">
+						<h4>Backend Technologies</h4>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fab fa-node-js icon-skill"></i>
+							</div>
+							<h6>NodeJS</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fas fa-database icon-skill"></i>
+							</div>
+							<h6>MongoDB</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fas fa-table icon-skill"></i>
+							</div>
+							<h6>SQL</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<div class="img">
+								<i class="fab fa-python icon-skill"></i>
+							</div>
+							<h6>Flask-Python</h6>
+						</div>
+					</div>
+				</div>
+				<div class="tech-box">
+					<div class="skill-box skill-heading">
+						<h4>MOOCs</h4>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<a href="https://www.udemy.com/certificate/UC-GOZ6Z2V7/" target="_blank">
+								<div class="img certificate-link">
+									<i class="fab fa-android icon-skill"></i>
+								</div>
+							</a>
+							<h6>Udemy Android</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<a href="https://raw.githubusercontent.com/CrioDo/Crio-Launch-Feb-2020-alok328raj/gh-pages/static/media/Crio-Launch-Feb-2020-Certificate.png" target="_blank">
+								<div class="img certificate-link">
+									<i class="fas fa-server icon-skill"></i>
+								</div>
+							</a>
+							<h6>Crio Launch 2020</h6>
+						</div>
+					</div>
+					<div class="skill-box">
+						<div class="skill-title">
+							<a href="https://coursera.org/share/62630e39ad22218ae8fe3be65b41a685" target="_blank">
+								<div class="img certificate-link">
+									<i class="fab fa-python icon-skill"></i>
+								</div>
+							</a>
+							<h6>Coursera ML foundations</h6>
+						</div>
+					</div>
+				</div>
 			</section>
-			<section id="tech-grid" class="page projects">
+			<section id="" class="page projects">
 				<h3>Working on it! :p</h3>
 			</section>
-			<section id="tech-grid" class="page contact">
+			<section id="" class="page contact">
 				<h3>Working on it! ☼</h3>
 			</section>
 		</main>
 	</div>
-	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+	<!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.js" integrity="sha256-X2Lo39cCWthPeaZnGfd03HrFZZKBM5R5619emL4sxZM=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.js" integrity="sha256-mfgvzVjyIcoXo0ElsT8uFIuDWYkvKCQ6wrkm6If7iug=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
