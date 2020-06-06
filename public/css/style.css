@@ -23,6 +23,9 @@ body{
     color: #033A6B;
     background: #01E08F;
 }
+a{
+    text-decoration: none;
+}
 /*mynav*/
 nav{
     width: 100vw;
@@ -42,6 +45,7 @@ nav{
 li.item-nav a{
     text-decoration: none;
     color: #013870;
+    font-family: subway;
 }
 li.item-nav-col a{
     text-decoration: none;
@@ -62,6 +66,7 @@ li.item-nav-col.active ion-icon, li.item-nav-col.active span{
     align-items: center;
     width: 100vw;
     height: 10vh;
+    padding: 2rem;
 }
 .nav-navbar-collapse{
     list-style: none;
@@ -221,7 +226,6 @@ main section{
     font-size: 2rem;
 }
 .card-box p{
-    border-radius: 0%;
     font-size: 0.8rem;
 }
 .about-box:nth-child(1){
@@ -240,7 +244,7 @@ main section{
 .icon-link{
     font-size: 2rem;
     padding: 0 0.5rem;
-    /* color: ; */
+    color: #007bff;
 }
 
 /* Tech */
@@ -263,6 +267,9 @@ main section{
 .skill-box{
     margin: auto;
     color: #033A6B;
+}
+.skill-heading h4{
+    font-family: subway;
 }
 .skill-heading{
     /* grid-column: 1/5; */
@@ -353,7 +360,114 @@ main section{
     padding-right: 8rem;
 }  */
 
-/*Smaller screens*/
+
+/*Project*/
+#project-grid{
+    /* padding: 2rem; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    /* grid-gap: 2rem; */
+    padding: 2rem;
+}
+.project-box{
+    /* background: #000; */
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 1rem 2rem 0 2rem;
+    width: 100%;
+    height: 100%;
+}
+.project-box:nth-child(1){
+    grid-column: 1/4;
+    background: transparent;
+    text-align: center;
+    justify-content: center;
+    color: #033A6B;
+}
+.project-box:nth-child(1) h3{
+    font-size: 3rem;
+}
+.project-box:nth-child(1) p{
+    font-family: cursiveReg;
+    font-size: 2.5rem;
+}
+.proj-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 3%;
+}
+.one, .two{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;  
+    border-radius: 3%;
+}
+.one{
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(3, 69, 109, 0.8) 100%)
+        , url(https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) center no-repeat;
+    transition: 0.5s;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+}
+.two{
+    opacity: 0;
+    z-index: 2;
+    background: #051320;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    transition: 0.6s;
+}
+.two h6{
+    font-size: 1.5rem;
+}
+.two p{
+    font-size: 1rem;
+}
+.two:hover{
+    opacity: 1;
+}
+.project-links a{
+    padding: 0.5rem;
+    text-decoration: none;
+}
+.project-link{
+    font-size: 2rem;
+}
+.project-links a:hover .project-link{
+    color: wheat;
+}
+.project-box:nth-child(3) .one{
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(3, 69, 109, 0.8) 100%)
+        , url(https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) center no-repeat;
+}
+.project-box:nth-child(3) .two{
+    background: #051320;
+}
+.project-box:nth-child(4) .one{
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(3, 69, 109, 0.8) 100%)
+        , url(https://images.pexels.com/photos/2792116/pexels-photo-2792116.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) center no-repeat;
+}
+.project-box:nth-child(4) .two{
+    background: #051320;
+}
+/*Screen dependent styling*/
 @media only screen and (min-width:800px){
     .face{
         opacity: 0.5;
@@ -481,5 +595,36 @@ main section{
         padding: 1rem 2rem;
         /* margin-bottom: 0.5rem; */
         position: relative;
+    }
+
+    #project-grid{
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 400px 400px 400px;
+    }
+    .project-box:nth-child(1) h3{
+        font-size: 1.8rem;
+    }
+    .project-box:nth-child(1) p{
+        font-family: cursiveReg;
+        font-size: 2rem;
+    }
+    .project-box{
+        padding: 1rem 2rem;
+    }
+    .project-box:nth-child(1){
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .project-box:nth-child(2){
+        grid-row: 2/3;
+    }
+    .project-box:nth-child(3){
+        grid-row: 3/4;
+    }
+    .project-box:nth-child(4){
+        grid-row: 4/5;
+        margin-bottom: 5rem;
     }
 }
