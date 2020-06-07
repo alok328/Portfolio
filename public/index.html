@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./js/Toasty.js-master/dist/toasty.min.css">
 	<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
     <meta charset="UTF-8">
@@ -13,7 +14,7 @@
 	<meta name="msapplication-navbutton-color" content="#db5945">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#db5945">
-	<link rel="icon" sizes="256x256" href="./images/pic.png">
+	<link rel="icon" sizes="256x256" href="./images/imgC.png">
     <title>Alok Raj - Portfolio</title>
 </head>
 <body>
@@ -37,19 +38,19 @@
 						<a href="/#Contact">Contact</a>
 					</li>
 					<li class="item-nav">
-						<a href="#">
+						<a href="https://www.linkedin.com/in/alok328/" target="_blank">
 							<ion-icon class="nav-icons" name="logo-linkedin"></ion-icon>
 							<!-- <span class="text-link">LinkedIn</span> -->
 						</a>
 					</li>
 					<li class="item-nav">
-						<a href="#">
+						<a href="https://github.com/alok328" target="_blank">
 							<ion-icon class="nav-icons" name="logo-github"></ion-icon>
 							<!-- <span class="text-link">Git</span> -->
 						</a>
 					</li>
 					<li class="item-nav">
-						<a href="#">
+						<a href="#" onclick="copyMail()">
 							<ion-icon class="nav-icons" name="mail-open"></ion-icon>
 							<!-- <span class="text-link">Gmail</span> -->
 						</a>
@@ -367,8 +368,8 @@
 							<h6>Payments Solution Application</h6>
 							<p>Provides a QR based solution for 'pay as you go' in the mess facilites of the college.</p>
 							<div class="project-links">
-								<a href="#"><i class="fab fa-github-square project-link"></i></a>
-								<a href="#"><i class="fas fa-server project-link"></i></a>
+								<a href="https://github.com/alok328/DigitalCafe/" target="_blank"><i class="fab fa-github-square project-link"></i></a>
+								<a href="https://digitalcafe.herokuapp.com/" target="_blank"><i class="fas fa-server project-link"></i></a>
 							</div>
 						</div>
 					</div>
@@ -383,7 +384,7 @@
 							<p>A customized version of the popularly available VSFTPD server.</p>
 							<p>Part of the Crio Launch Program</p>
 							<div class="project-links">
-								<a href="#"><i class="fab fa-github-square project-link"></i></a>
+								<a href="https://criodo.github.io/Crio-Launch-Feb-2020-alok328raj/" target="_blank"><i class="fab fa-github-square project-link"></i></a>
 							</div>
 						</div>
 					</div>
@@ -398,19 +399,44 @@
 							<p>An android application for the members of the club, 'Unesquo'.</p>
 							<p>Enables sharing of events</p>
 							<div class="project-links">
-								<a href="#"><i class="fab fa-github-square project-link"></i></a>
-								<a href="#"><i class="fab fa-google-play project-link"></i></a>
+								<a href="https://github.com/alok328/unesquo" target="_blank"><i class="fab fa-github-square project-link"></i></a>
+								<a href="https://play.google.com/store/apps/details?id=com.alok328.raj.unesquo&hl=en_IN" target="_blank"><i class="fab fa-google-play project-link"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="" class="page contact">
-				<h3>Working on it! ☼</h3>
+			<section id="contact-grid" class="page contact">
+				<div class="contact-box">
+					<img src="./images/imgC.png" alt="">
+					<h4>Get in touch?</h4>
+				</div>
+				<div class="contact-box">
+					<h3>Contact</h3>
+					<h5>+91-9973988065</h5>
+					<h5 onclick="copyMail()" style="cursor: pointer;">alok328raj@gmail.com</h5>
+				</div>
+				<div class="contact-box">
+					<h3>Social</h3>
+					<div class="social-links">
+						<a href="https://www.instagram.com/herr_raj/" target="_blank"><ion-icon class="social-link" name="logo-instagram"></ion-icon></a>
+						<a href="https://www.facebook.com/alok.raj.524381" target="_blank"><ion-icon class="social-link" name="logo-facebook"></ion-icon></a>
+						<a href="https://cutt.ly/your-average-coder" target="_blank"><ion-icon class="social-link" name="logo-youtube"></ion-icon></a>
+						<a href="https://www.linkedin.com/in/alok328/" target="_blank"><ion-icon class="social-link" name="logo-linkedin"></ion-icon></a>
+						<a href="https://github.com/alok328" target="_blank"><ion-icon class="social-link" name="logo-github"></ion-icon></a>
+					</div>
+				</div>
+				<div class="contact-box">
+					<div class="social-links">
+						<h3>Site Repo</h3>
+						<a href="https://github.com/alok328/portfolio" target="_blank"><ion-icon class="social-link" name="code-sharp"></ion-icon></a>
+					</div>
+				</div>
 			</section>
 		</main>
 	</div>
 	<!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
+	<script src="./js/Toasty.js-master/dist/toasty.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.js" integrity="sha256-X2Lo39cCWthPeaZnGfd03HrFZZKBM5R5619emL4sxZM=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.js" integrity="sha256-mfgvzVjyIcoXo0ElsT8uFIuDWYkvKCQ6wrkm6If7iug=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

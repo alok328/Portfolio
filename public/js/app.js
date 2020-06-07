@@ -1,3 +1,26 @@
+count = 0;
+
+function copyMail(){
+    const mailID = 'alok328raj@gmail.com';
+    var dummy = document.createElement("input");
+    document.body.appendChild(dummy);
+    dummy.setAttribute('value', mailID);
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+    var toast = new Toasty();
+    toast.configure({duration: 1200});
+    toast.transition("scale");
+    msgs = ['Copied already', 'What do you want?', 'How can I help you?', 
+            'Quit it!', 'Hey, enough!', "There's only so many things I can do!"];
+    if(count === 0){
+        toast.warning("Mail Id Copied! Dare you do it again?");
+    }else{
+        toast.warning(msgs[Math.floor(Math.random() * msgs.length)]);
+    }
+    count+=1;
+}
+
 function init(){
     const pages = document.querySelectorAll('.page');
     const tabs = document.querySelectorAll('.tabs');
