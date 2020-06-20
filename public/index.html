@@ -3,7 +3,6 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./js/Toasty.js-master/dist/toasty.min.css">
 	<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
     <meta charset="UTF-8">
@@ -35,7 +34,7 @@
 						<a href="/#projects">Projects</a>
 					</li>
 					<li class="item-nav tabs">
-						<a href="/#Contact">Contact</a>
+						<a href="/#contact">Contact</a>
 					</li>
 					<li class="item-nav">
 						<a href="https://www.linkedin.com/in/alok328/" target="_blank">
@@ -50,7 +49,7 @@
 						</a>
 					</li>
 					<li class="item-nav">
-						<a href="#" onclick="copyMail()">
+						<a class="mail-button" href="#" onclick="copyMail()">
 							<ion-icon class="nav-icons" name="mail-open"></ion-icon>
 							<!-- <span class="text-link">Gmail</span> -->
 						</a>
@@ -78,7 +77,7 @@
 						</a>
 					</li>
 					<li class="item-nav-col tabs-col">
-						<a href="/#Contact">
+						<a href="/#contact">
 							<ion-icon class="nav-icons" name="call-outline"></ion-icon>
 						</a>
 					</li>
@@ -122,20 +121,45 @@
 			</nav> -->
 		</header>
 		<main>
+			<div id="snackbar">
+				<h6 id="snackbar-msg">Mail Id Copied! Dare you do it again?</h6>
+			</div>
 			<section id="grid-home" class="page home">
+				<!-- <div class="box">
+					<div class="box-content">
+						
+					</div>
+				</div> -->
 				<div id="home" class="box">
 					<div class="box-content">
+						<!-- <div class="perspective-text">
+							<div class="perspective-line">
+								<p></p>
+								<p>Code</p>
+							</div>
+							<div class="perspective-line">
+								<p>Code</p>
+								<p>Play</p>
+							</div>
+							<div class="perspective-line">
+								<p>Play</p>
+								<p>Repeat</p>
+							</div>
+							<div class="perspective-line">
+								<p>Repeat</p>
+								<p>Alok Raj</p>
+							</div>
+							<div class="perspective-line">
+								<p>Alok Raj</p>
+								<p></p>
+							</div>
+						</div> -->
 						<h1 class="intro-heading">Code | Play | Repeat</h1>
 						<h3 class="name">Alok Raj.</h3>
 						<h4>Love developing applications and playing the guitar</h4>
 						<!-- <img id="gif" src="./images/fin.gif" alt=""> -->
 					</div>
 				</div>
-				<!-- <div class="box">
-					<div class="box-content">
-						
-					</div>
-				</div> -->
 				<div class="box">
 					<div class="box-content">
 						<img src="./images/svgPerson.svg" alt="">
@@ -145,73 +169,55 @@
 			<section id="grid-about" class="page about">
 				<div class="about-box intro-section">
 					<h3>Hey there, I'm Alok. Good to see you!</h3>
-					<p>I have experience building backend services using NodeJS & Flask. I also like developing android applications and websites. <br> Currently I am exploring the field of Data Science.</p>
+					<p>I am a full stack developer and am also interested in data science.</p>
 				</div>
 				<div class="about-box">
 					<div class="card-box">
-						<div class="face face1">
-							<div class="content">
-								<ion-icon class="card-img-top mx-auto" name="school-outline"></ion-icon>
-								<h3>Education</h3>
-							</div>
-						</div>
-						<div class="face face2">
-							<div class="content">
-								<br>
-								<h4>Computer Science & Engg</h4>
-								<h6>Birla Institute of Technology, Mesra</h6>
-								<p>2016-20</p>
-								<br>
-								<h6>Some of the subjects I like:</h6>
-								<p>Object Oriented Programming in JAVA, Database Management Systems</p>
-							</div>
+						<div class="content-about">
+							<ion-icon class="card-img-top mx-auto" name="school-outline"></ion-icon>
+							<h3>Education</h3>
+							<br>
+							<h4>Computer Science & Engg</h4>
+							<h6>Birla Institute of Technology, Mesra</h6>
+							<p>2016-20</p>
+							<br>
+							<a href="https://www.bitmesra.ac.in" target="_blank"><ion-icon class="icon-link" name="desktop-outline"></ion-icon></a>
+							<!-- <a href="https://www.bitmesra.ac.in" target="_blank"><ion-icon class="icon-link" name="document-text-outline"></ion-icon></a> -->
 						</div>
 					</div>
 				</div>
 				<div class="about-box">
 					<div class="card-box">
-						<div class="face face1">
-							<div class="content">
-								<ion-icon class="card-img-top mx-auto" name="briefcase-outline"></ion-icon>
-								<h3>Work Experience<h3>
-							</div>
-						</div>
-						<div class="face face2">
-							<div class="content">
-								<br>
-								<h4>Oracle</h4>
-								<h6>Application Developer</h6>
-								<p>Since July 2020</p>
-								<br>
-								<h4>Crio</h4>
-								<h6>Backend Student Developer</h6>
-								<a href="https://criodo.github.io/Crio-Launch-Feb-2020-alok328raj/" target="_blank"><ion-icon class="icon-link" name="logo-github"></ion-icon></a>
-							</div>
+						<div class="content-about">
+							<ion-icon class="card-img-top mx-auto" name="briefcase-outline"></ion-icon>
+							<h3>Work Experience<h3>
+							<!-- <br> -->
+							<h4>Oracle</h4>
+							<h6>Application Developer</h6>
+							<p>Since July 2020</p>
+							<!-- <br> -->
+							<h4>Crio</h4>
+							<h6>Backend Student Developer</h6>
+							<a href="https://criodo.github.io/Crio-Launch-Feb-2020-alok328raj/" target="_blank"><ion-icon class="icon-link" name="logo-github"></ion-icon></a>
 						</div>
 					</div>
 				</div>
 				<div class="about-box">
 					<div class="card-box">
-						<div class="face face1">
-							<div class="content">
-								<ion-icon class="card-img-top mx-auto" name="rocket-outline"></ion-icon>
-								<h3>Hobbies</h3>
-							</div>
+						<div class="content-about">
+						<ion-icon class="card-img-top mx-auto" name="rocket-outline"></ion-icon>
+							<h3>Hobbies</h3>
+							<br>
+							<h6><strong>Cricket, Table Tennis</strong></h6>
+							<br>
+							<h6><strong>Playing Guitar</strong></h6>
+							<br>
+							<h6><strong>Creating & editing videos</strong></h6>
+							<h6>Tech & Music</h6>
+							<a href="https://cutt.ly/your-average-coder" target="_blank"><ion-icon class="icon-link" name="logo-youtube"></ion-icon></a>
+							<a href="https://www.instagram.com/herr_raj/" target="_blank"><ion-icon class="icon-link" name="logo-instagram"></ion-icon></a>
 						</div>
-						<div class="face face2">
-							<div class="content">
-								<br>
-								<h6><strong>Cricket, Table Tennis</strong></h6>
-								<br>
-								<h6><strong>Playing Guitar</strong></h6>
-								<br>
-								<h6><strong>Creating & editing videos</strong></h6>
-								<h6>Tech & Music</h6>
-								<a href="https://cutt.ly/your-average-coder" target="_blank"><ion-icon class="icon-link" name="logo-youtube"></ion-icon></a>
-								<a href="https://www.instagram.com/herr_raj/" target="_blank"><ion-icon class="icon-link" name="logo-instagram"></ion-icon></a>
-							</div>
-						</div>
-					</div>
+					</div>		
 				</div>
 			</section>
 			<section id="tech-grid" class="page tech">
@@ -291,7 +297,7 @@
 				</div>
 				<div class="tech-box">
 					<div class="skill-box skill-heading">
-						<h4>OS | Platforms</h4>
+						<h4>Platforms</h4>
 					</div>
 					<div class="skill-box">
 						<div class="skill-title">
@@ -339,7 +345,7 @@
 									<i class="fas fa-server icon-skill"></i>
 								</div>
 							</a>
-							<h6>Crio Launch 2020</h6>
+							<h6>Crio Launch</h6>
 						</div>
 					</div>
 					<div class="skill-box">
@@ -407,14 +413,20 @@
 				</div>
 			</section>
 			<section id="contact-grid" class="page contact">
-				<div class="contact-box">
-					<img src="./images/imgC.png" alt="">
+				<div id="contact" class="contact-box">
+					<img id="profile-pic" src="./images/imgC.png" alt="">
 					<h4>Get in touch?</h4>
+					<h5>+91-9973988065</h5>
 				</div>
 				<div class="contact-box">
-					<h3>Contact</h3>
-					<h5>+91-9973988065</h5>
-					<h5 onclick="copyMail()" style="cursor: pointer;">alok328raj@gmail.com</h5>
+					<h3>Email</h3>
+					<h5 class="email-text mail-button" onclick="copyMail()" style="cursor: pointer;">alok328raj@gmail.com</h5>
+				</div>
+				<div class="contact-box">
+					<div class="social-links">
+						<h3>Site Repo</h3>
+						<a href="https://github.com/alok328/Portfolio" target="_blank"><ion-icon class="social-link" name="code-sharp"></ion-icon></a>
+					</div>
 				</div>
 				<div class="contact-box">
 					<h3>Social</h3>
@@ -426,24 +438,15 @@
 						<a href="https://github.com/alok328" target="_blank"><ion-icon class="social-link" name="logo-github"></ion-icon></a>
 					</div>
 				</div>
-				<div class="contact-box">
-					<div class="social-links">
-						<h3>Site Repo</h3>
-						<a href="https://github.com/alok328/portfolio" target="_blank"><ion-icon class="social-link" name="code-sharp"></ion-icon></a>
-					</div>
-				</div>
 			</section>
 		</main>
 	</div>
-	<!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
-	<script src="./js/Toasty.js-master/dist/toasty.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.js" integrity="sha256-X2Lo39cCWthPeaZnGfd03HrFZZKBM5R5619emL4sxZM=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.js" integrity="sha256-mfgvzVjyIcoXo0ElsT8uFIuDWYkvKCQ6wrkm6If7iug=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="./js/app.js"></script>
-	<script src="./js/clock.js"></script>
 	<script>
         $('.navbar-collapse a').click(function(){
             $(".navbar-collapse").collapse('hide');

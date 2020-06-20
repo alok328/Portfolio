@@ -8,16 +8,24 @@ function copyMail(){
     dummy.select();
     document.execCommand('copy');
     document.body.removeChild(dummy);
-    var toast = new Toasty();
-    toast.configure({duration: 1200});
-    toast.transition("scale");
     msgs = ['Copied already', 'What do you want?', 'How can I help you?', 
             'Quit it!', 'Hey, enough!', "There's only so many things I can do!"];
-    if(count === 0){
-        toast.warning("Mail Id Copied! Dare you do it again?");
-    }else{
-        toast.warning(msgs[Math.floor(Math.random() * msgs.length)]);
+    var x = document.getElementById("snackbar");
+    var msg = document.getElementById("snackbar-msg");
+    var buttons = document.querySelectorAll('.mail-button');
+    buttons.forEach((b)=>{
+        b.style.pointerEvents = 'none';
+    })
+    if(count > 0){
+        msg.innerHTML = msgs[Math.floor(Math.random() * msgs.length)];
     }
+    x.className = "show";
+    setTimeout(function(){ 
+        x.className = x.className.replace("show", "");
+        buttons.forEach((button)=>{
+            button.style.pointerEvents = 'auto';
+        })
+    }, 3000);
     count+=1;
 }
 
@@ -80,23 +88,24 @@ function init(){
         currentTab = tabNumber; 
     }
 
-    document.addEventListener('wheel', throttle(scrollChange, 1500));
-    // document.addEventListener('touchmove', throttle(scrollChange, 1500));
-    function scrollChange(e){
-        console.log(e);
-        if(e.deltaY>0){
-            scrollTab += 1;
-        }else{
-            scrollTab -= 1;
+    if(window.innerWidth >= 1024){
+        document.addEventListener('wheel', throttle(scrollChange, 1500));
+        // document.addEventListener('touchmove', throttle(scrollChange, 1500));
+        function scrollChange(e){
+            if(e.deltaY>0){
+                scrollTab += 1;
+            }else{
+                scrollTab -= 1;
+            }
+            if(scrollTab>4){
+                scrollTab = 0;
+            }
+            if(scrollTab<0){
+                scrollTab = 4;
+            }
+            changeTabsSlider(scrollTab);
+            changePage(scrollTab);
         }
-        if(scrollTab>4){
-            scrollTab = 0;
-        }
-        if(scrollTab<0){
-            scrollTab = 4;
-        }
-        changeTabsSlider(scrollTab);
-        changePage(scrollTab);
     }
 
 
@@ -124,6 +133,9 @@ function init(){
         }else{
             navClosed.style.removeProperty('display');
             navOpen.style.display = 'none';
+        }
+        if(window.innerWidth >= 1024){
+
         }
     });
     
