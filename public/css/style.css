@@ -1,14 +1,14 @@
 /* global */
 @font-face{
     font-family: chelseaRegular;
-    src: url('../fonts/Poppins-Regular.ttf');
+    src: url(../fonts/Poppins-Regular.ttf);
 }
 @font-face{
-    font-family: cursiveReg;
-    src: url(../fonts/RemachineScript_Personal_Use.ttf);
+    font-family: bangersReg;
+    src: url(../fonts/Bangers-Regular.ttf);
 }
 @font-face{
-    font-family: subway;
+    font-family: subwayReg;
     src: url(../fonts/Subway.ttf);
 }
 *, *::before, *::after{
@@ -100,7 +100,7 @@ nav{
 li.item-nav a{
     text-decoration: none;
     color: #fdfffc;
-    font-family: subway;
+    font-family: subwayReg;
 }
 li.item-nav-col a{
     text-decoration: none;
@@ -222,19 +222,23 @@ main section{
 #face:hover{
     transform: translateX(-2px);
 }
-.box h1{
-    font-size: 3rem;
+.intro-heading{
+    font-family: bangersReg;
+    text-shadow: 2px 4px rgba(196, 196, 196, 0.8);
+    /* color: tomato; */
+    font-size: 3.5rem;
+    letter-spacing: 5px;
     /* color: #C3083F; */
 }
 .box h4{
-    /* font-family: cursiveReg; */
-    font-size: 1.5rem;
+    font-family: bangersReg;
+    font-size: 2rem;
+    padding: 1rem;
     /* color: #C3083F; */
 }
 .name{
-    /* font-family: cursiveReg; */
+    font-family: chelseaRegular;
     font-size: 2rem;
-    padding: 2rem;
     /* color: #FAFEFE;    */
 }
 .box{
@@ -403,7 +407,7 @@ p {
     align-content: center;
 } */
 .card-box h3{
-    font-family: subway;
+    font-family: subwayReg;
     font-size: 2rem;
 }
 .card-box p{
@@ -446,7 +450,7 @@ p {
     color: #2f2f2f;
 }
 .skill-heading h4{
-    font-family: subway;
+    font-family: subwayReg;
     font-size: 2rem;
     color: #2F2F2F;
 }
