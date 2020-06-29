@@ -41,7 +41,15 @@ function init(){
         tab.addEventListener('click', function(){
             changeTabsCol(this);
             changePage(index);
-            scrollTab = index
+            scrollTab = index;
+            tabsCol.forEach((t)=>{
+                t.style.pointerEvents = 'none'
+            });
+            setTimeout(function(){
+                tabsCol.forEach((t)=>{
+                    t.style.pointerEvents = 'auto'
+                })
+            }, 600);
         });
     });
     tabs.forEach((tab, index)=>{
@@ -49,8 +57,17 @@ function init(){
             changeTabs(this);
             changePage(index);
             scrollTab = index;
+            tabs.forEach((t)=>{
+                t.style.pointerEvents = 'none'
+            });
+            setTimeout(function(){
+                tabs.forEach((t)=>{
+                    t.style.pointerEvents = 'auto'
+                })
+            }, 600);
         });
     });
+    
 
     function changeTabsSlider(tabNumber){
         const activeTab = document.querySelectorAll('.tabs')[tabNumber];

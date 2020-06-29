@@ -214,7 +214,7 @@ main section{
     object-fit: cover;
 }
 #blink{
-    animation: blinkAni 1s infinite;
+    animation: blinkAni 1s step-end infinite;
 }
 #face{
     transition: 0.4s;
@@ -276,15 +276,9 @@ main section{
    }
 }
 @keyframes blinkAni{
-    0%{
-        opacity: 0;
-    }
-    33%, 66%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
 }
 /* .perspective-text {
     width: 100%;
