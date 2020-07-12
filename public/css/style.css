@@ -645,11 +645,12 @@ main section{
     .box h1{
         font-family: subwayReg;
         font-size: 2rem;
-        letter-spacing: normal;
+        letter-spacing: 2px;
     }
     .box h4{
         font-family: subwayReg;
         font-size: 1.3rem;
+        letter-spacing: 0.8px;
     }
     .box h6{
         display: none;
