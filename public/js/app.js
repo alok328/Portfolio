@@ -130,7 +130,7 @@ function init(){
     //handle navbar transition
     navOpen = document.querySelector('.nav-navbar');
     navClosed = document.querySelector('.nav-navbar-collapse');
-    if(window.innerWidth > 800){
+    if(window.innerWidth > 1024){
         navOpen.style.removeProperty('display');
         navClosed.style.display = 'none';
     }else{
@@ -145,7 +145,7 @@ function init(){
         changeTabsCol(tabsCol[0]);
         changeTabsSlider(0);
         scrollTab = 0;
-        if(window.innerWidth > 800){
+        if(window.innerWidth > 1024){
             navOpen.style.removeProperty('display');
             navClosed.style.display = 'none';
         }else{
