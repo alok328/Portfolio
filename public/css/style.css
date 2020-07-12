@@ -194,13 +194,13 @@ main section{
     transform: translateX(-2px);
 }
 .intro-heading{
-    font-family: subway;
+    font-family: subwayReg;
     text-shadow: 2px 4px rgba(196, 196, 196, 0.8);
     font-size: 3.5rem;
     letter-spacing: 5px;
 }
 .box h4{
-    font-family: subway;
+    font-family: subwayReg;
     font-size: 2rem;
     padding: 1rem;
     /* letter-spacing: 1.5px; */
@@ -643,12 +643,12 @@ main section{
         padding-bottom: 5rem;
     }
     .box h1{
-        font-family: subway;
+        font-family: subwayReg;
         font-size: 2rem;
         letter-spacing: normal;
     }
     .box h4{
-        font-family: subway;
+        font-family: subwayReg;
         font-size: 1.3rem;
     }
     .box h6{
