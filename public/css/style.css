@@ -203,7 +203,6 @@ main section{
     font-family: subwayReg;
     font-size: 2rem;
     padding: 1rem;
-    /* letter-spacing: 1.5px; */
 }
 .box h6{
     font-family: chelseaRegular;
@@ -218,7 +217,6 @@ main section{
 }
 .box h6{
     transform: translateY(2px);
-    /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
 	transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
 }
@@ -244,7 +242,6 @@ main section{
 }
 @keyframes float{
 	0% {
-		/* box-shadow: 0 2px 15px 0px rgba(0,0,0,0.6); */
 		transform: translate3d(0px, 0px, 0px);
 	}
 	50% {
@@ -252,7 +249,6 @@ main section{
 		transform: translate3d(0px, 15px, 30px)
 	}
 	100% {
-		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
 		transform: translate3d(0px, 0px, 0px);
 	}
 }
@@ -260,7 +256,6 @@ main section{
 #grid-about{
     display: grid;
     padding: 2rem 5rem;
-    /* padding-top: 2rem; */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 2fr;
     text-align: center;
