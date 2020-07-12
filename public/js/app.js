@@ -1,5 +1,5 @@
+// Snackbar Functionalities
 count = 0;
-
 function copyMail(){
     const mailID = 'alok328raj@gmail.com';
     var dummy = document.createElement("input");
@@ -8,8 +8,8 @@ function copyMail(){
     dummy.select();
     document.execCommand('copy');
     document.body.removeChild(dummy);
-    msgs = ['Copied already', 'What do you want?', 'How can I help you?', 
-            'Quit it!', 'Hey, enough!', "There's only so many things I can do!"];
+    msgs = ['Copied already!', 'Hit me Up!', 'How can I help you?', 
+            'Quit it!', "There's only so many things I can do!"];
     var x = document.getElementById("snackbar");
     var msg = document.getElementById("snackbar-msg");
     var buttons = document.querySelectorAll('.mail-button');
@@ -29,6 +29,7 @@ function copyMail(){
     count+=1;
 }
 
+// Page transitions and scrolling
 function init(){
     const pages = document.querySelectorAll('.page');
     const tabs = document.querySelectorAll('.tabs');
@@ -105,9 +106,9 @@ function init(){
         currentTab = tabNumber; 
     }
 
+    // enable wheel event for larger devices
     if(window.innerWidth >= 1024){
         document.addEventListener('wheel', throttle(scrollChange, 1500));
-        // document.addEventListener('touchmove', throttle(scrollChange, 1500));
         function scrollChange(e){
             if(e.deltaY>0){
                 scrollTab += 1;
@@ -126,7 +127,7 @@ function init(){
     }
 
 
-    //navbar
+    //handle navbar transition
     navOpen = document.querySelector('.nav-navbar');
     navClosed = document.querySelector('.nav-navbar-collapse');
     if(window.innerWidth > 800){
@@ -158,6 +159,8 @@ function init(){
     
 }
 
+// Function for putting hold when transitioning from one page to 
+// another using wheel event
 function throttle(func, limit){
     let inThrottle;
     return function(){
@@ -171,4 +174,5 @@ function throttle(func, limit){
     };
 }
 
+// initialize
 init()
