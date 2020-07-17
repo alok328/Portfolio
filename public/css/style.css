@@ -193,6 +193,11 @@ main section{
 #face:hover{
     transform: translateX(-2px);
 }
+#heart{
+    vertical-align: middle;
+    color: #FF4E45;
+    /* font-size: 1.5rem; */
+}
 .intro-heading{
     font-family: subwayReg;
     text-shadow: 2px 4px rgba(196, 196, 196, 0.8);
@@ -621,6 +626,9 @@ main section{
         transform: translateY(0);
         opacity: 1;
     }
+    .wa-mob{
+        display: none;
+    }
 }
 
 /* Mobile */
@@ -804,6 +812,9 @@ main section{
     .contact-box:nth-child(4){
         grid-row: 4/5;
         margin-bottom: 2rem;
+    }
+    .wa-web{
+        display: none;
     }
 }
 
