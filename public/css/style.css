@@ -693,7 +693,8 @@ main section{
         letter-spacing: 0.9px;
     }
     .box h6{
-        display: none;
+        font-size: 1.2rem;
+        letter-spacing: 0.9px;
     }
     .name{
         font-size: 1.8rem;
