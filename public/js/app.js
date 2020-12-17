@@ -107,24 +107,24 @@ function init(){
     }
 
     // enable wheel event for larger devices
-    if(window.innerWidth >= 1024){
-        document.addEventListener('wheel', throttle(scrollChange, 1500));
-        function scrollChange(e){
-            if(e.deltaY>0){
-                scrollTab += 1;
-            }else{
-                scrollTab -= 1;
-            }
-            if(scrollTab>4){
-                scrollTab = 0;
-            }
-            if(scrollTab<0){
-                scrollTab = 4;
-            }
-            changeTabsSlider(scrollTab);
-            changePage(scrollTab);
-        }
-    }
+    //     if(window.innerWidth >= 1024){
+    //         document.addEventListener('wheel', throttle(scrollChange, 1500));
+    //         function scrollChange(e){
+    //             if(e.deltaY>0){
+    //                 scrollTab += 1;
+    //             }else{
+    //                 scrollTab -= 1;
+    //             }
+    //             if(scrollTab>4){
+    //                 scrollTab = 0;
+    //             }
+    //             if(scrollTab<0){
+    //                 scrollTab = 4;
+    //             }
+    //             changeTabsSlider(scrollTab);
+    //             changePage(scrollTab);
+    //         }
+    //     }
 
 
     //handle navbar transition
